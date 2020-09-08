@@ -24,10 +24,10 @@
 Гит
 Быстрый старт (для нетерпеливых)
 Если нет времени читать весь пост, а надо сию секунду залить свой код на удаленный репозиторий не вникая во все тонкости, то делается это так:
-
+https://github.com/FAFLIKE/shop-mistik
 git init
 git add your_file
 git commit -m "first commit"
-git remote add origin https://github.com/you_repository/you_project
+git remote add origin https://github.com/you_repository/you_project #подключение к репозиторию
 git push -u origin master
 Все!
