@@ -1,7 +1,8 @@
 {% extends 'tovar/basePage.html' %}
 
 {% block content %}
-    {% for numberGoods in a.products %}
-        <div><Img src={{ numberGoods.image }} Width="200" Height="150">{{ numberGoods.name }}</div>
+    <div>{{ session }}</div>
+    {% for numberGoods in products %}
+        <div><a href="{% url 'vievGoods' numberGoods=numberGoods.id %}"><Img src={{ numberGoods.image }} Width="200" Height="150">{{ numberGoods.name }}</div>
     {% endfor %}
 {% endblock %}
