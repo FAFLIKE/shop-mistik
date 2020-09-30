@@ -1,0 +1,15 @@
+{% extends 'shop_mistik/basePage.html' %}
+{% load tags %}
+
+{% block content %}
+    {% for product_id, count in cart.items %}
+        {% with product=products|takeByKeyStr:product_id %}
+            <div>name: {{ product.name }} | count: {{ count }} | price: {{ product.price }}$ | cost: {{ product.price|multiply:count }}$</div>
+        {% endwith %}
+    {% endfor %}
+    <div>-</div>
+    <div>-</div>
+    <div>cart: {{ cart }}</div>
+    <div>products: {{ products }}</div>
+{% endblock %}
+

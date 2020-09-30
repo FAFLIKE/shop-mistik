@@ -1,8 +1,9 @@
-{% extends 'tovar/basePage.html' %}
+{% extends 'shop_mistik/basePage.html' %}
 
 {% block content %}
-    <div>{{ session }}</div>
+    <div>{{ cart }}</div>
     {% for numberGoods in products %}
         <div><a href="{% url 'vievGoods' numberGoods=numberGoods.id %}"><Img src={{ numberGoods.image }} Width="200" Height="150">{{ numberGoods.name }}</div>
+        
     {% endfor %}
 {% endblock %}

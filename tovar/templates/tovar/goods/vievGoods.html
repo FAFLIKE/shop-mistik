@@ -1,6 +1,13 @@
-{% extends 'tovar/basePage.html' %}
+{% extends 'shop_mistik/basePage.html' %}
 
 {% block content %}
-    <div><a href="/goods/{{ numberGoods }}"><Img src={{ products.image }} Width="200" Height="150"></div>
+    <div><a href="{% url 'vievGoods' numberGoods=numberGoods %}"><Img src={{ products.image }} Width="200" Height="150"></div>
     <div>{{ products.name }}</a></div>
+    <div>In cart: {{ count }}</a></div>
+    <div>{{ numberGoods }}</a></div>
+    <form method="POST">
+        {% csrf_token %}
+        {{ cart_product_form }}
+        <input type="submit" value="Add to cart">
+    </form>
 {% endblock %}

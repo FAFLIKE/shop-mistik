@@ -31,7 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'tovar.apps.TovarConfig',
+    'shop_mistik',
+    'cart',
+    'tovar',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,3 +124,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
+CART_SESSION_ID = 'cart'

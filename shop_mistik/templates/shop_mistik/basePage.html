@@ -3,6 +3,10 @@
     </head>
     <body>
         <div><a href="{% url 'mainPage' %}">Главная</a></div>
+        <form method="POST">
+        {% csrf_token %}
+        <input type="submit" value="reset">
+        </form>
         
         {% block content %}
         {% endblock %}
