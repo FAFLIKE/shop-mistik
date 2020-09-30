@@ -4,5 +4,5 @@ from django.db import models
 class modelGoods(models.Model):
     image = models.URLField()
     name =  models.CharField(max_length=100)
-    price =  models.CharField(max_length=12)
+    price =  models.PositiveIntegerField(default=1)
     discription = models.TextField()
